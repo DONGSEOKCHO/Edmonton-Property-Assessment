@@ -1,0 +1,85 @@
+/*
+ * Name: Dongseok Cho,Zheyuan Xu
+ * Date: 2020/12/08
+ * Milestone 3
+ * Course: CMPT 305 AS01
+ * Instructor: Indratmo Indratmo
+ * Description: Creates a window to display the assessment values and search specific values.
+ */
+
+A Summary of Added Features:
+
+1. Neighbourhood Assessment Value Average.
+It makes average of negibourhood in the list.
+When the program starts, parse the list made from JSON and pick out distinct neighbourhoods. 
+When "Average" button clicked it opens a new window that contains
+a table. The table has columns of "Neighbourhood" and "Average". 
+The "Neighbourhood" column shows the name of neighbourhood in Edmonton and
+"Average" column shows the average assessment value of neighbourhood.
+Before displaying, the list is sorted high to low by using insertionsort.
+  
+2. Edmonton Property Assessment API(playground data same).
+Used HttpRequest to read JSON data from the net.
+using open source "org.json.maven" parsed all the assessment values
+that I needed. I set the data reading limit to 10000, so I used while
+loop to parse all the data using "offset" method from the source. The
+loop will increment offset by 10000 every single time until there is no element
+in the parsed list. 
+
+3. Google map pop up.
+used Desktop class to pop up the browser.
+used google map coordination search API form google API.(link: https://developers.google.com/maps/documentation/geocoding/overview)
+Gets latitude and longitude values from selected table value.
+This value obtained by using getSelectionModel() from javafx table.
+Lastly connect the cordinate to API.
+
+4. Playground table.
+Gets data from Edmonton data.
+When the program starts it parse JSON data and pick out the distinct neighbourhood.
+WHile parsing, if same neighbourhood appears again increment the playground number by 1.
+The table has "Neighbourhood" and "Playground NUmber" column. They hold neighbourhood name and 
+number of playground value.
+
+5.Added play ground data.
+
+Known bugs and limitations. 
+1. It is very slow, when start up. Assuming getting huge number of data makes the program slow.
+2. Sometimes error occurs while loading up. Not from code. If reopen the IntellJi, works okay.
+3. space sencitive. When searching need space properly
+
+6. PieChart 
+The incoming data is determined one by one by using a for loop to determine the range of the 
+assessed value of each piece of data and to count the amount. 
+The amount of data is used to calculate the percentage size of each piece of the pie chart.
+When calculating the percentage size, adjust the value to fit the form of the percentage chart by calculating the size.
+Place the pop-up pie chart by creating additional stages and scenes, and set the percentage 
+data to be displayed to the user as determined by the mouse click event.
+
+7. 
+Set Window Event for the main window to close all small pop-up windows simultaneously for user convenience.
+Use Platform.exit() to achieve the effect.
+
+
+Contributions：
+
+Dongseok Cho:
+- implemented getting the data form Edmonton Assessment Value API JSON.
+- Created the assessment value average table for neighbourhood.
+- implemented search functions.
+- implemented google map latitude and longitude search.
+
+Zheyuan XU:
+- Implementation of statistics and calculations for pie chart production.
+- Simultaneous closing all pop-up windows
+- Integration of Presentation video
+
+Together:
+- created main table.
+- created buttons.
+- created titles.
+- data implementation discussion
+- error checks.
+- UI Design.
+
+
+ 

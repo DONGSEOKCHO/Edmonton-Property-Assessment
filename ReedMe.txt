@@ -1,0 +1,22 @@
+Used Open source JSON parser.
+Also Using JavaFx.
+
+org.json.maven
+
+Json jav file is included in the FILE. (if not)
+
+How to download Json.
+link: https://github.com/stleary/JSON-java
+
+- scroll down and go to "JSON in java [package org.json]" section.
+- click "Click here if you just want the lastest release jar file."
+
+set up steps.
+1) open File -> Project Structure
+2) Select Modules(from left)
+3) Select Dependencies
+4) Click Plus button (top right)
+5) Click Jar or directory
+6) Select json-20201115 jar(if downloaded found it at your downloaded location) and click OK
+7) check the json-20201115
+8) Click Apply and OK
